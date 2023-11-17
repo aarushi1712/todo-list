@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    width: 100%;
+    /*vh is like % of viewport height(screen size to occupy)*/
+    min-height: 100vh; /*min height means it needs to occupy min this much*/
+    padding:10px;
+    background: linear-gradient(to top, #00FFFF, #FFFFFF);
+}
+.todo-app{
+    width: 100%; /*of container element-that is div with class as container*/
+    max-width: 540px; /*to avoid overflow for small screen*/
+    background-color: #FFFFFF;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    color: #000080;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center; /*aligns according to y axis*/
+    justify-content: space-between; /*aligns according to x axis*/
+    background-color: #D3D3D3;
+    border-radius: 15px;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1; /*the remaining elements take as much space as required and this takes all leftover space*/
+    border: none;
+    background: transparent;
+    outline: none; /*outside border*/
+    padding: 10px;
+    font-weight: bold;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    font-size:16px;
+    cursor: pointer;
+    background: #FFA500;
+    color: #FFFFFF;
+    border-radius: 15px;
+
+}
+ul li{
+    position: relative;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+ul li::before{
+    content:'';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%; /*to create a circle*/
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+    background: #edeef0;
+    border-radius: 50%;
+}

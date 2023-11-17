@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--meta tag to make website size as how much of screen to cover-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title>To-Do List App</title>
+    </head>
+    <body>
+        <!--A container for the entire home page as it is good to divide all the content into divs and nest or seperate as per need-->
+        <div class="container">
+            <div class="todo-app">
+                <h2>My To-Do List
+                    <img src="icon.png">
+                </h2>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add a task">
+                    <button onclick="addTask()">Add</button>
+                </div>
+                <ul id="list-container">
+                    <!--Wrote this as a model on how layout should look and to apply css and then commented this html out and added dynamically from JS-->
+                    <!-- <li class="checked">Task 1</li>
+                    <li>Task 1</li>
+                    <li>Task 1</li> -->
+                </ul>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
